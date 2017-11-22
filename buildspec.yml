@@ -3,14 +3,13 @@ phases:
   pre_build:
     commands:
       - $(aws ecr get-login --region ap-northeast-1)
-      - TAG="v03"
   build:
     commands:
-      - docker build --tag "${REPOSITORY}:${TAG}" . 
+      - docker build --tag "${REPOSITORY}:v02" . 
   post_build:
     commands:
-      - docker push "${REPOSITORY}:${TAG}"
-      - printf '{"Image":"%s:%s"}' $REPOSITORY $TAG > build.json
+      - docker push "${REPOSITORY}:v02"
+      - printf '{"Image":"%s:%s"}' $REPOSITORY v02 > build.json
 artifacts:
   files:
     - build.json
