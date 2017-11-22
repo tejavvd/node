@@ -1,0 +1,11 @@
+{
+    "Parameters": {
+        "Cluster": "Cluster",
+        "DesiredCount": "2",
+        "Role": "ecsServiceRole",
+        "TargetGroupArn": "arn:aws:ecr:ap-northeast-1:314815898958:repository/ecs-it-demo",
+        "Image": {
+            "Fn::GetParam": ["MyAppBuild", "build.json", "Image"]
+        }
+    }
+}
