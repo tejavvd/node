@@ -22,7 +22,7 @@ Resources:
       LoadBalancers:
         - ContainerName: node
           ContainerPort: 80
-          TargetGroupArn: !Ref TargetGroupAr
+          TargetGroupArn: !Ref TargetGroupArn
 
   TaskDefinition:
     Type: AWS::ECS::TaskDefinition
