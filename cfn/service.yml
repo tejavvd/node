@@ -23,6 +23,9 @@ Resources:
         - ContainerName: node
           ContainerPort: 80
           TargetGroupArn: !Ref TargetGroupArn
+      DeploymentConfiguration:
+	- MaximumPercent: 100
+	  MinimumHealthyPercent: 33
 
   TaskDefinition:
     Type: AWS::ECS::TaskDefinition
