@@ -1,9 +1,9 @@
 {
     "Parameters": {
-        "Cluster": "Cluster-MyGithub",
+        "Cluster": "Cluster",
         "DesiredCount": "2",
-        "Role": "ecsInstanceRole",
-        "TargetGroupArn": "arn:aws:ecr:ap-northeast-1:314815898958:repository/mygithub-demo",
+        "Role": "ecsServiceRole",
+        "TargetGroupArn": "arn:aws:elasticloadbalancing:ap-south-1:245603756403:targetgroup/newtg/30143cfa7e9fa1b5",
         "Image": {
             "Fn::GetParam": ["MyAppBuild", "build.json", "Image"]
         }
