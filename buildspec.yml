@@ -8,7 +8,7 @@ phases:
       - docker build --tag "${REPOSITORY}:v03" . 
   post_build:
     commands:
-      - docker push "${REPOSITORY}:v02"
+      - docker push "${REPOSITORY}:v03"
       - printf '{"Image":"%s:%s"}' $REPOSITORY v03 > build.json
 artifacts:
   files:
