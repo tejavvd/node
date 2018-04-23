@@ -23,7 +23,7 @@ Resources:
           ContainerPort: 80
           TargetGroupArn: !Ref TargetGroupArn
       DeploymentConfiguration:
-        - MaximumPercent: 100
+          MaximumPercent: 100
           MinimumHealthyPercent: 33
 
   TaskDefinition:
